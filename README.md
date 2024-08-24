@@ -1,11 +1,15 @@
 # About
 This repository contains Matlab scripts for Benes networks.
 - `BenesNet_IO2S.m`: finds switch states of a Benes network, given its output.
-- `BenesNet_S2IO.m`: finds output of a Benes networks, given its switch states.
+- `BenesNet_S2IO.m`: finds the output of a Benes networks, given its switch states.
 - `benes_test.m`: test script for functionality and speed of `BenesNet_IO2S.m` and `BenesNet_S2IO.m`.
 
 # Notes
 - We consider [Benes networks][BN1] that contain only 2-2 switches.
+- Input of a Benes network is always `[1:N]`, where `N` is a power of `2`.
+- Output of a Benes network is a permutation of `[1:N]`.
+- Given a Benes network's output, there can be several sets of switch states that generate that output, `BenesNet_IO2S.m` finds one of them.
+- Given a Benes network' switch states, there can be only one output. `BenesNet_S2IO.m` finds that output.
 
 [//]: # (References)
 
